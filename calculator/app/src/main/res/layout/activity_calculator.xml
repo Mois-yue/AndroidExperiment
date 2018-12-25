@@ -11,15 +11,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:enabled="false"
-        android:textSize="60sp"
-        android:hint="@string/hint_text2"/>
+        android:hint="@string/hint_text2"
+        android:textSize="60sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="vertical">
-    </LinearLayout>
+        android:orientation="vertical"></LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,23 +31,27 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textSize="20sp"
-            android:text="横屏" />
+            android:text="横屏"
+            android:textSize="40sp"
+            android:background="#ee82ee"
+            android:textColor="#FFF"
+            android:layout_marginBottom="1dp"/>
 
         <Button
             android:id="@+id/stand"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:textSize="20sp"
-            android:text="竖屏" />
+            android:text="竖屏"
+            android:textSize="40sp"
+            android:background="#ee82ee"
+            android:textColor="#FFF" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="horizontal">
-    </LinearLayout>
+        android:orientation="horizontal"></LinearLayout>
 
 </LinearLayout>

@@ -1,5 +1,6 @@
 package com.example.a10518.musicplayer;
 
+//歌曲类，存放歌曲的基本信息
 public class MusicInfo {
     long id;       //歌曲ID
     String title;  //歌曲名称

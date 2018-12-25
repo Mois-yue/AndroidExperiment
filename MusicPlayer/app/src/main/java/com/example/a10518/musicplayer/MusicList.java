@@ -6,8 +6,10 @@ import android.provider.MediaStore;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
-
+//歌曲列表
 public class MusicList {
     //扫描系统中的MP3文件，返回一个list集合
     public static List<MusicInfo> getMusicInfo(Context context){
@@ -39,8 +41,30 @@ public class MusicList {
         return MusicList;
     }
 
-    //将获取的时间格式化：将毫秒转换成分：秒的格式
+    public static List<HashMap<String, String>> getMusicMaps(
+            List<MusicInfo> musicInfo) {
+        List<HashMap<String, String>> mp3list = new ArrayList<HashMap<String, String>>();
 
+        int i=0;
+        for (Iterator iterator = musicInfo.iterator(); iterator.hasNext();) {
+            i++;
+            MusicInfo musicInfos = (MusicInfo) iterator.next();
+            HashMap<String, String> map = new HashMap<String, String>();
+            map.put("number",String.valueOf(i));
+            map.put("id",String.valueOf(musicInfos.getId()));
+            map.put("title", musicInfos.getTitle());
+            map.put("Artist", musicInfos.getArtist());
+            map.put("duration", formatTime(musicInfos.getDuration()));
+            map.put("size", String.valueOf(musicInfos.getSize()));
+            map.put("url", musicInfos.getUrl());
+            mp3list.add(map);
+        }
+        return mp3list;
+    }
+
+
+
+    //将获取的时间格式化：将毫秒转换成分：秒的格式
     public static String formatTime(long time){
         String min = time / (1000 * 60) + "";
         String sec = time % (1000 * 60) + "";

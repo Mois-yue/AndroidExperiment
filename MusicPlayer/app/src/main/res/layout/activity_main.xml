@@ -4,19 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ListenList">
 
     <LinearLayout
         android:id="@+id/Background"
-        android:layout_width="398dp"
-        android:layout_height="536dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="@mipmap/background"
         android:orientation="vertical">
+
+        <!--<Button-->
+            <!--android:id="@+id/list"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:text="音乐列表"-->
+            <!--/>-->
 
         <SeekBar
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:layout_marginTop="400dp"/>
+            android:layout_marginTop="350dp"/>
 
         <RelativeLayout
             android:id="@+id/button"
@@ -39,7 +46,7 @@
                 android:layout_height="80dp"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentRight="true"
-                android:src="@mipmap/Next"/>
+                android:src="@mipmap/next"/>
 
             <RelativeLayout
                 android:layout_width="180dp"
@@ -52,7 +59,7 @@
                     android:layout_height="80dp"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentLeft="true"
-                    android:src="@mipmap/Play"
+                    android:src="@mipmap/play"
                     />
 
                 <ImageButton
@@ -61,7 +68,7 @@
                     android:layout_height="80dp"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentRight="true"
-                    android:src="@mipmap/Pause"
+                    android:src="@mipmap/pause"
                     />
             </RelativeLayout>
 
