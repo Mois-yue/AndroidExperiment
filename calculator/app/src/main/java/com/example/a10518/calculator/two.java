@@ -92,7 +92,7 @@ public class two extends AppCompatActivity  implements View.OnClickListener{
 
         //功能按钮
         rsText = (TextView) findViewById(R.id.show);
-        Button b_clear = (Button) findViewById(R.id.clear);//不能够清除
+        Button b_clear = (Button) findViewById(R.id.clear);
         Button b_back = (Button) findViewById(R.id.back);
         Button b_m = (Button) findViewById(R.id.m);
         Button b_x = (Button) findViewById(R.id.jiechen);
@@ -111,7 +111,7 @@ public class two extends AppCompatActivity  implements View.OnClickListener{
             public void onClick(View v)
             {
                 Intent intent = new Intent();
-                intent.setClass(two.this,two.class);
+                intent.setClass(two.this,main.class);
                 two.this.startActivity(intent);
             }
         });
@@ -164,7 +164,7 @@ public class two extends AppCompatActivity  implements View.OnClickListener{
                 }
                 break;
             case R.id.clear:
-                rsText.setText(null);
+                rsText.setText("");
                 break;
             //b0--9
             case R.id.b0:
@@ -334,12 +334,13 @@ public class two extends AppCompatActivity  implements View.OnClickListener{
                     case 2://阶乘
                         rsText.setText(String.valueOf(haha.clulatex(num1)));
                         return;
-                    case 3:			   			             	rsText.setText(String.valueOf(haha.clulatesin(num1)));;
+                    case 3:	//sin
+                        rsText.setText(String.valueOf(haha.clulatesin(num1)));;
                         return;
-                    case 4:
+                    case 4://cos
                         rsText.setText(String.valueOf(haha.clulatecos(num1)));
                         return;
-                    case 5:
+                    case 5://tan
                         rsText.setText(String.valueOf(haha.clulatetan(num1)));
                         return;
                     default:

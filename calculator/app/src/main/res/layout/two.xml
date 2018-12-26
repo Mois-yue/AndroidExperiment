@@ -15,7 +15,7 @@
         android:background="#F2F2F2"
         android:gravity="right|center_vertical"
         android:id="@+id/show"
-        />
+        android:hint="@string/hint_text"/>
 
     <TableLayout
         android:layout_width="fill_parent"
