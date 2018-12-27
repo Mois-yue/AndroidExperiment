@@ -79,7 +79,7 @@ public class two extends AppCompatActivity  implements View.OnClickListener{
     }
 
 
-    TextView rsText = null;  //显示器
+    TextView rsText ;  //显示器
     String  num1, num2;
     BigDecimal Result;  //计算结果
     int op = 0; //判断操作数，
@@ -130,6 +130,7 @@ public class two extends AppCompatActivity  implements View.OnClickListener{
 
         //listener
         rsText.setOnClickListener(this);
+        b_clear.setOnClickListener(this);
         b_m.setOnClickListener(this);
         b_back.setOnClickListener(this);
         b_sin.setOnClickListener(this);
@@ -312,7 +313,7 @@ public class two extends AppCompatActivity  implements View.OnClickListener{
                     return;
                 }
                 num1 = myStringtan;
-                rsText.setText("cos("+myStringtan + ")");
+                rsText.setText("tan("+myStringtan + ")");
                 op = 5;
                 isClickEqu = false;
                 break;
