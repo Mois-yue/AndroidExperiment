@@ -1,79 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListenList">
+    tools:context="com.example.music.MainActivity">
 
-    <LinearLayout
-        android:id="@+id/Background"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@mipmap/background"
-        android:orientation="vertical">
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <!--<Button-->
-            <!--android:id="@+id/list"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:text="音乐列表"-->
-            <!--/>-->
-
-        <SeekBar
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginTop="350dp"/>
-
-        <RelativeLayout
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageButton
-                android:id="@+id/last"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentStart="true"
-                android:src="@mipmap/last" />
-
-
-            <ImageButton
-                android:id="@+id/next"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentRight="true"
-                android:src="@mipmap/next"/>
-
-            <RelativeLayout
-                android:layout_width="180dp"
-                android:layout_height="80dp"
-                android:layout_centerInParent="true">
-
-                <ImageButton
-                    android:id="@+id/play"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentLeft="true"
-                    android:src="@mipmap/play"
-                    />
-
-                <ImageButton
-                    android:id="@+id/pause"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentRight="true"
-                    android:src="@mipmap/pause"
-                    />
-            </RelativeLayout>
-
-        </RelativeLayout>
-
-    </LinearLayout>
-
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>
